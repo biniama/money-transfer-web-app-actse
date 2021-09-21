@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import {useHistory} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+
+    const history = useHistory();
+
     const classes = useStyles();
 
     return (
@@ -32,7 +36,12 @@ const Header = () => {
                     <Typography variant="h6" className={classes.title}>
                         Money Transfer App
                     </Typography>
-                    <Button color="inherit">Show Profile</Button>
+                    <Button color="inherit" onClick={() => history.push('/')}>
+                        Create an Account
+                    </Button>
+                    <Button color="inherit" onClick={() => history.push('/admin/listAccounts')}>
+                        List Accounts
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>

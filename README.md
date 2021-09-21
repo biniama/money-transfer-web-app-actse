@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installing packages
+`npm install axios axios-hooks`
+
 ## Github actions
 1. `npm install gh-pages --save-dev`
 2. in package.json
